@@ -8,6 +8,9 @@ import "./index.css";
 // Paginas
 import Home from './Routes/Home.jsx';
 import NewPots from './Routes/NewPots.jsx';
+import Admin from './Routes/Admin.jsx';
+import Post from './Routes/Post';
+import EditPost from './Routes/EditPost.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,18 @@ const router = createBrowserRouter([
     {
       path: "/new",
       element: <NewPots />,
+    },
+    {
+      path: "/posts/:id",
+      element: <Post />
+    },
+    {
+      path: "/admin",
+      element: <Admin />,
+    },
+    {
+      path:"/posts/edit/:id",
+      element: <EditPost />,
     },
     ],
   },
